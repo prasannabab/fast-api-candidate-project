@@ -1,0 +1,27 @@
+# --- Web framework ---
+fastapi==0.115.0            # Core FastAPI framework
+uvicorn[standard]==0.30.6   # ASGI server used to run the app
+
+# --- Database ---
+sqlalchemy==2.0.35          # ORM used to talk to Postgres
+psycopg2-binary==2.9.9      # PostgreSQL driver used by SQLAlchemy
+alembic==1.13.2             # DB migration tool (schema versioning)
+
+# --- Validation / settings ---
+pydantic==2.9.2              # Data validation library FastAPI is built on
+pydantic-settings==2.5.2     # Loads settings/config from environment variables
+email-validator==2.2.0       # Backs pydantic's EmailStr type
+
+# --- Security / auth ---
+python-jose[cryptography]==3.3.0   # JWT encode/decode for OAuth2 security
+passlib[bcrypt]==1.7.4             # Password hashing helpers
+
+# --- Rate limiting ---
+slowapi==0.1.9               # Rate limiting middleware/decorators for FastAPI
+
+# --- Forms / file uploads ---
+python-multipart==0.0.9      # Required by FastAPI to parse form data & file uploads
+
+# --- Testing ---
+pytest==8.3.3                 # Test runner
+httpx==0.27.2                  # Async HTTP client used by FastAPI's TestClient
